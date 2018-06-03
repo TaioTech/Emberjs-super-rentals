@@ -29,8 +29,13 @@ export default Component.extend({
       }
     },
     newTest() {
-      let heyThere = get(this, 'heyThere');
-      heyThere();
+      // All of these ways do the same things just slightly susceptible to unique results
+      // By default       this.sendAction('action');
+      this.sendAction();
+      //this.attrs.heyThere();
+      //get(this, 'heyThere')();
+      // let heyThere = get(this, 'heyThere');
+      // heyThere();
     }
   }
 

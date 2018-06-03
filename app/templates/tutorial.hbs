@@ -1,8 +1,9 @@
 {{!-- {{#user-filter users=users}}
   <h5>Block text</h5>
 {{/user-filter}} --}}
+{{#user-filter action="testAction" users=users as |people|}}
 
-{{#user-filter heyThere=(action 'testAction') users=users as |people|}}
+{{!-- {{#user-filter heyThere=(action 'testAction') users=users as |people|}} --}}
   {{#each people as |person|}}
     <h1>{{person.name}}</h1>
     <h3>{{person.occupation}}</h3>
